@@ -97,6 +97,15 @@
 
 % \reversemarginpar%
 
+\copyrightinfo{\scriptsize Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for third-party components of this work must be honored. For all other uses, contact the owner/author(s). \\
+{\emph{CHI '20 Extended Abstracts, April 25--30, 2020, Honolulu, HI, USA.}} \\
+\copyright~2020 Copyright is held by the author/owner(s). \\
+ACM ISBN 978-1-4503-6819-3/20/04. \\
+DOI: https://doi.org/10.1145/3334480.3383046 }
+
+\clubpenalty=10000
+\widowpenalty=10000 
+
 \begin{document}
 
 \begin{marginfigure}[-5pc]
@@ -128,23 +137,8 @@
 
 % %% For the camera ready, use the commands provided by the ACM in the Permission Release Form.
 
-% \CopyrightYear{2020} 
-% \acmYear{2020} 
-% \setcopyright{rightsretained} 
-% \acmConference[CHI'20 Extended Abstracts]{CHI Conference on Human Factors in Computing Systems Extended Abstracts}{April 25--30, 2020}{Honolulu, HI, USA}
-% \acmBooktitle{CHI Conference on Human Factors in Computing Systems Extended Abstracts (CHI'20 Extended Abstracts), April 25--30, 2020, Honolulu, HI, USA}
-% \isbn{978-1-4503-6819-3/20/04}
-% \doi{10.1145/3334480.3383046}
 % %% Then override the default copyright message with the \acmcopyright command.
 % \copyrightinfo{\acmcopyright}
-
-\CopyrightYear{2020}
-\setcopyright{rightsretained}
-\conferenceinfo{CHI'20,}{April  25--30, 2020, Honolulu, HI, USA}
-\isbn{978-1-4503-6819-3/20/04}
-\doi{10.1145/3334480.3383046}
-%% Then override the default copyright message with the \acmcopyright command.
-\copyrightinfo{\acmcopyright}
 
 
 \maketitle
@@ -153,59 +147,10 @@
 % https://twitter.com/anjirokhan/status/546046683331973120
 \RaggedRight{} 
 
-% \begin{comment}
-% \subsection{Iteration 1}
-% \subsubsection{Prototype Visualizer Design}
-% \begin{figure}%[ht]
-%   \centering
-%     \includegraphics[width=7.5cm,height=4cm]{figures/Prot1.png}
-%   \caption{A sample screen of the first prototype}
-%   \label{fig:prot1}
-% \end{figure}
-% \subsubsection{Test Design and Experiment Setup}
-% \begin{figure}%[ht]
-%   \centering
-%     \includegraphics[width=7.5cm,height=4cm]{figures/iter1Setup.jpg}
-%   \caption{Experiment setup for iteration 1}
-%   \label{fig:iter1Setup}
-% \end{figure}
-
-% \subsection{Iteration 2}
-% \subsubsection{Prototype Visualizer Design}
-% \begin{figure}%[ht]
-%   \centering
-%     \includegraphics[width=7.5cm,height=4cm]{figures/Prot2.png}
-%   \caption{A sample screen of the second prototype}
-%   \label{fig:prot2}
-% \end{figure}
-% \subsubsection{Test Design and Experiment Setup}
-% \begin{figure}%[ht]
-%   \centering
-%     \includegraphics[width=7.5cm,height=4cm]{figures/iter2Setup.jpg}
-%   \caption{Experiment setup for iteration 2}
-%   \label{fig:iter2Setup}
-% \end{figure}
-
-% \subsection{Iteration 3}
-% \begin{figure}%[ht]
-%   \centering
-%     \includegraphics[width=7.5cm,height=4cm]{figures/Prot3.png}
-%   \caption{A sample screen of the third prototype}
-%   \label{fig:prot3}
-% \end{figure}
-% \begin{figure}%[ht]
-%   \centering
-%     \includegraphics[width=7.5cm,height=4cm]{figures/iter3Setup.jpg}
-%   \caption{Experiment setup for iteration 3}
-%   \label{fig:iter3Setup}
-% \end{figure}
-% \end{comment}
-
 % Do not change the page size or page settings.
 
 \begin{abstract}
 Visualizers are usually added into music players to augment the listening experiences of hearing users. However, for the case of most members of the Deaf and Hard of Hearing (DHH) community, they have partial deafness which may give them a ``limited'' listening experience as compared to their counterparts. In this paper, we present ViTune, a visualizer tool that enhances the musical experiences of the DHH through the use of an on-screen visualizer generating effects alongside music. We observed how members of the DHH community typically experienced music through an initial user study. We then iterated on developing a visualizer prototype where we did multiple usability tests involving at least 15 participants from the DHH community. We observed how they experienced music with the help of our prototype and noticed that certain music features and elements augmented these experiences. Visualization attributes, their matching qualitative descriptions and equivalent subjective attributes were identified with the help of music experts. Also, affects hypothesized to be induced and dissuaded were identified in improving these listening experiences.
-%These graphics were based on related attempts on music visualization and were then designed specifically for the DHH community through an iterative testing and feedback process. A total of 15 participants from the DHH community  As of the latest iteration, we were able to identify visualization characteristics which coincided with the experience of specific affects. For future work, we plan on incorporating the visualizer system with haptic devices, validating the visualizer with an automated testing methodology, comparing the prototype with currently existing music visualizers, and integrating the features of the visualizer into a music player software.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -242,7 +187,7 @@ Visualizers are usually added into music players to augment the listening experi
 \printccsdesc
 % Please use the 2012 Classifiers and see this link to embed them in the text: \url{https://dl.acm.org/ccs/ccs_flat.cfm}
 
-\begin{marginfigure}[0pc]
+\begin{marginfigure}[-1pc]
 \begin{minipage}{\marginparwidth}
      \centering
     \includegraphics[width=4.5cm,height=12.5cm]{figures/newSystemDesignFlowchart.png}
@@ -266,9 +211,9 @@ What we refer to as the visualizer prototype is actually composed of two major m
 
 The analyzer module accepts the music file to be visualized and, optionally, a file containing manually transcribed lyrics corresponding to the given music file. 
 
-\begin{marginfigure}[-8pc]
+\begin{marginfigure}[-2pc]
 \begin{minipage}{\marginparwidth}
-     \includegraphics[width=4.75cm,height=8cm]{figures/ArchitectureLBW.png}
+     \includegraphics[width=4.5cm,height=8cm]{figures/ArchitectureLBW.png}
     \caption{A simplified diagram of the visualizer prototype architecture.}
     \label{fig:architecture}
     \end{minipage}
@@ -276,7 +221,7 @@ The analyzer module accepts the music file to be visualized and, optionally, a f
 
 \begin{marginfigure}[0.5pc]
 \begin{minipage}{\marginparwidth}
-     \includegraphics[width=4.5cm,height=8.5cm]{figures/iter3SetupVector.png}
+     \includegraphics[width=4cm,height=6cm]{figures/iter3SetupVector.png}
     \caption{The experiment setup for the third iteration.}
     \label{fig:iter3SetupVector}
     \end{minipage}
@@ -321,13 +266,7 @@ A playlist was crafted based on the preferences of the DHH participants. We gath
     \end{minipage}
 \end{marginfigure}
 
-% \begin{marginfigure}[-1pc]
-% \begin{minipage}{\marginparwidth}
-%      \includegraphics[width=4.5cm,height=5cm]{figures/participant_demographics_vertical.png}
-%     \caption{The breakdown of the participants throughout the three (3) iterations.}
-%     \label{fig:participants}
-%     \end{minipage}
-% \end{marginfigure}
+
 
 
 
@@ -339,8 +278,6 @@ During the usability tests, each participant was provided a laptop containing th
 
 
 
-% \section{Architecture}
-% What we refer to as the visualizer prototype is actually composed of two (2) major modules: the \textbf{analyzer} module, and an actual \textbf{visualizer} module. The analyzer module is responsible for performing audio preprocessing on the music file, while the visualizer module is responsible for the actual visualization of the music file driven by interpreting the analysis made by the analyzer module. See Figure \ref{fig:architecture} for a diagram of the prototype architecture.
 
 
 
@@ -348,33 +285,15 @@ During the usability tests, each participant was provided a laptop containing th
 
 
 
-% The analyzer module accepts the music file to be visualized and, optionally, a file containing manually transcribed lyrics corresponding to the given music file. All audio processing in this module was done using Librosa, a Python package for music and audio analysis described in \cite{McFee:2015}. The analyzer first performs harmonic-percussive source separation (HPSS). Bandpass filters then divide the harmonic components into four (4) frequency classifications based on the audio spectrum as discussed by \cite{Leigh:2018}. These classifications are: the \textbf{background} (20-250 Hz), representing the sub-bass and bass bands; the \textbf{lowground} (251-2000 Hz), representing the low-midrange and midrange bands; the \textbf{highground} (2001-6000 Hz), representing the upper-midrange and presence bands; and the \textbf{foreground} (6001-10000 Hz), representing a part of the brilliance band. Each of the harmonic components corresponding to each of these classifications are created a chromagram. The chromagrams are subjected to non-local filtering (NLF) and horizontal medium filtering (HMF) to reduce noise. Finally, the chromagram frames are synchronized with the beat frames based on the tempo as estimated by the beat tracker on the percussive component of the music file. The chromagrams, along with the lyrics, if provided, are now packaged into a JSON file for visualization. The visualizer module takes the JSON file containing the results of the analysis as an input. Unlike in the preprocessing phase, the audio processing done in this module is done in real time (i.e., \textit{while} the music is playing). As the music file is played by this module, a Fast Fourier Transform (FFT) is used to once again separate the current audio frame into the four frequency classifications we mentioned earlier. The mean signal strength per frame of each classification (changed per audio frame in real time) is used to determine the size of the classification's visualization layer components, while the chromagrams from the analyzer are used to determine the saturation, brightness, and opacity of the visualization layer components (changed per music beat). For all but the foreground layer, each classification's visualization layer is composed of rectangular columns. Stars compose the visualization layer of the foreground. Particle emitters are activated when the signal strengths in the foreground layer (expected to contain the percussive parts of the music) experience a spike within a short period of time.
+
+
 
 \section{Results}
 \subsection{Participant Demographics}
 
 
 
-% \begin{table}[H]
-% \label{tab:demographic}
-% \begin{tabular}{|c|c|c|c|c|}
-% \hline
-% \multirow{2}{*}{\textbf{}} & \multicolumn{4}{c|}{\textbf{Age (Years)}} \\ \cline{2-5} 
-%                           & 18-25  & 26-32  & 33-40  & \textbf{Total} \\ \hline
-% \multicolumn{5}{|c|}{\textbf{1st Iteration Count}}                           \\ \hline
-% Male                       & 3      & 0      & 1      & 4              \\ \hline
-% Female                     & 1      & 0      & 0      & 1              \\ \hline
-% \multicolumn{5}{|c|}{\textbf{2nd Iteration Count}}                            \\ \hline
-% Male                       & 3      & 0      & 0      & 3              \\ \hline
-% Female                     & 2      & 0      & 0      & 2              \\ \hline
-% \multicolumn{5}{|c|}{\textbf{3rd Iteration Count}}                           \\ \hline
-% Male                       & 3      & 0      & 1      & 4              \\ \hline
-% Female                     & 1      & 0      & 0      & 1              \\ \hline
-% \textbf{Total}             & 13     & 0      & 2      & 15             \\ \hline
-% \end{tabular}
-% \caption{The demographics of the participants in the experiments we conducted.} 
-% \label{tab:demographic}
-% \end{table}
+
 
 
 
@@ -384,17 +303,17 @@ Each of the three iterations of the prototype was tested by five DHH participant
 From the experiments conducted since our first iteration, we were able to categorize the DHH participants into two personas. The first persona are those who have partial hearing and intend to use the features of the visualizer (such as visual pulsations, colors, and shapes) to further improve their musical experience (i.e., as a complement to their partial hearing). While all of them appreciate visualizations, some respondents from this persona group suggested exploring compatibility with other haptic devices. The second persona are those participants with profound hearing loss, and mainly use the visualizer to see the lyrics of music with vocals. In contrast to the first persona, the members of the second persona appreciated the non-lyrical visuals (such as shapes and colors) less, and preferred devices which provided both lyrics and more haptic means of feedback. These personas allowed us to design the visualizer prototype that was developed in this study.
 
 
-\begin{marginfigure}[-35pc]
+\begin{marginfigure}[-28pc]
 \begin{minipage}{\marginparwidth}
-     \includegraphics[width=4.5cm,height=4cm]{figures/Affects.png}
+     \includegraphics[width=4.3cm,height=3.8cm]{figures/Affects.png}
     \caption{The affect count averages per music file. Legend: (E)xcited, (H)appy, (C)ontented, (R)elaxed, (B)ored, (S)ad, (U)pset, (T)ense}
     \label{fig:affects}
     \end{minipage}
 \end{marginfigure}
 
-\begin{marginfigure}[-10pc]
+\begin{marginfigure}[-7pc]
 \begin{minipage}{\marginparwidth}
-     \includegraphics[width=4.75cm,height=7cm]{figures/Visualizations.png}
+     \includegraphics[width=3.8cm,height=5.8cm]{figures/Visualizations.png}
     \caption{The visualization attributes of each music file.}
     \label{fig:visualizations}
     \end{minipage}
@@ -402,7 +321,7 @@ From the experiments conducted since our first iteration, we were able to catego
 
 \begin{marginfigure}[0pc]
 \begin{minipage}{\marginparwidth}
-     \includegraphics[width=4.5cm,height=4cm]{figures/demographic.png}
+     \includegraphics[width=3.8cm,height=3.2cm]{figures/demographic.png}
     \caption{The demographics of the participants in the experiments we conducted.}
     \label{fig:demographic}
     \end{minipage}
@@ -429,7 +348,7 @@ Figure \ref{fig:visualizations} shows the visualization attributes of each music
 
 The Spearman's rank correlation coefficient is then calculated between the affect data and the visualization attributes. 
 
-\begin{marginfigure}[-5pc]
+\begin{marginfigure}[-4pc]
 \begin{minipage}{\marginparwidth}
      \includegraphics[width=4.75cm,height=2.3cm]{figures/AffectVisualization.png}
     \caption{The correlation values between the affect data and the visualization attributes.}
@@ -439,7 +358,7 @@ The Spearman's rank correlation coefficient is then calculated between the affec
 
 \begin{marginfigure}[0pc]
 \begin{minipage}{\marginparwidth}
-     \includegraphics[width=4.5cm,height=8cm]{figures/TrendsNew_Rotated.png}
+     \includegraphics[width=4.5cm,height=7cm]{figures/TrendsNew_Rotated.png}
     \caption{The trends noted in the correlation between affect data and the visualization attributes. Green bars represent a direct relationship between a visualization attribute and an affect, while red bars represent inverse relationships between the same. The length of each bar denotes the strength of the correlation with the direction of the bar corresponding to whether it represents a direct relationship (to the right) or an inverse relationship (to the left). Note than only correlations with $|\rho| \geq 0.3$ (as per \cite{Cohen:1988}) are displayed.}
     \label{fig:trends}
     \end{minipage}
@@ -447,36 +366,12 @@ The Spearman's rank correlation coefficient is then calculated between the affec
 
 Figure \ref{fig:correlation} shows these correlation values wherein moderate and strong correlations (according to the standard of \cite{Cohen:1988}) are emphasized in order to highlight relationships wherein it may be hypothesized that the affects of the viewer are augmented by the visualizations. We have noted several trends from these correlations, as shown in Figure \ref{fig:trends}. For the affects observed to have at least moderately strong direct relationships with certain visualization attributes, it may be hypothesized that such visualization attributes \textit{induce} such affects. Likewise, for at least moderately strong inverse relationships observed, the pertinent visualization attributes are hypothesized to \textit{dissuade} the relevant affects. More comprehensive experiments and analyses are needed to confirm these relationships as well as to identify the specific moments in the music wherein such induction or dissuasion occurs.
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=9cm,height=6cm]{figures/Trends.png}
-%     \caption{The trends noted in the correlation between affect data and the visualization attributes.}
-%     \label{fig:trends}
-% \end{figure}
+
 
 \section{Conclusion and Future Work}
 We have developed ViTune, a music visualization prototype for augmenting the musical experiences of the DHH, in collaboration with the DHH community. Our experiments suggest that for certain affects, the visualizations produced by the prototype at least moderately induce or dissuade such affects to the DHH. Our next step will be to determine exactly when and where in the music (and its visualizations) certain visual elements induce or dissuade such affects. This could be done by avoiding some of the subjective nature of determining relevant visual attributes through maintaining an internal visualization monitor which logs the visual elements currently shown along with their relevant objective measurements. This allows for viewing a \textit{snapshot} of the exact state of the visualizations the moment an affect is experienced, making it easier to infer the cause of the affect. Effectiveness studies between existing music visualizers and ViTune may be conducted to see how our tool fares against other visualizers and what functionalities ViTune could be incorporated from them with the guidance of the DHH community. Further work could also be done in integrating haptic devices to the system as well as integrating them into a user-ready music player software.
 
-% \begin{marginfigure}[1pc]
-% \begin{minipage}{\marginparwidth}
-%      \includegraphics[width=4.75cm,height=2.25cm]{figures/AffectVisualization.png}
-%     \caption{The correlation values between the affect data and the visualization attributes.}
-%     \label{fig:correlation}
-%     \end{minipage}
-% \end{marginfigure}
 
-
-
-
-% The next step will involve improving the visualization prototype based on insights acquired from the respondents throughout the first three (3) iterations of testing performed, as well as to package the prototype into a user-ready and functional web-based music visualization application.
-
-% We plan to add further functionality to the current prototype based on the input gathered from past iterations of testing. An option to toggle the presence of accompanying haptic feedback is being considered for further development. Should additional visualization styles be developed, adding functionality to switch between multiple visualization styles is a possible addition to future iterations. As the lyrics feature in the current iteration is hardcoded due to time constraints in development, automated ways to extract lyrics (as applicable) from audio input are also being explored. 
-
-% For additional iterations to be done in the future, we intend to conduct the testing with a larger number of participants. In order to accommodate the increased participant count, we are also considering more spacious venues for the experiments; where the visualizations may instead be projected in front of the participants rather than be presented through one machine for each participant. Testing will follow a modified protocol, which will primarily be based on what was used in the third iteration, and will take into account any constraints for testing new features which may be added to the application.
-
-
-% \section{Future Impact}
-% The impact we are hoping for in this research is to understand how visualizations, when used in order to enhance existing relevant interactions, are able to improve upon how the DHH are able to experience music through non-auditory means. We aim to integrate the visual aspect of music as an important element at par with lyrics, harmony, rhythm, and others in order to provide users with a richer understanding of musical works. We wish that this tool shall be used to lessen the alienation of music, and auditory-based works, in general towards the DHH community by providing them with a more visual representation of the said works. This visualization tool can be applied to further augment the musical experience of the hearing as a complement to the auditory means of experiencing music. Finally, the researchers are hoping that the concepts used in this study can be adapted and deployed by musical tools used by the musical community, not necessarily as a direct alternative, but as an accompaniment to their existing sets of features.
 
 \section{Authors}
 Jordan Aiko Deja is a faculty in the Software Technology Department, College of Computer Studies of De La Salle University, Manila, Philippines. He is also a PhD student at the University of Primorska, Koper, Slovenia. 
